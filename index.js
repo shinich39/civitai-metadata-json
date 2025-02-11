@@ -388,14 +388,15 @@ function getMetaFromImages(images) {
  */
 export async function collectCheckpoints(type = "all", skip = false) {
   if (!fs.existsSync(INFO_PATH)) {
+    const createdAt = Date.now();
     fs.writeFileSync(INFO_PATH, JSON.stringify({
       checkpointCount: 0,
       checkpointVersionCount: 0,
-      checkpointUpdatedAt: Date.now(),
+      checkpointUpdatedAt: createdAt,
       lastCheckpointUrl: null,
       loraCount: 0,
       loraVersionCount: 0,
-      loraUpdatedAt: Date.now(),
+      loraUpdatedAt: createdAt,
       lastLoraUrl: null,
     }, null, 2), "utf8");
   }
@@ -556,14 +557,15 @@ export async function collectCheckpoints(type = "all", skip = false) {
  */
 export async function collectLoras(type = "all", skip = false) {
   if (!fs.existsSync(INFO_PATH)) {
+    const createdAt = Date.now()
     fs.writeFileSync(INFO_PATH, JSON.stringify({
       checkpointCount: 0,
       checkpointVersionCount: 0,
-      checkpointUpdatedAt: Date.now(),
+      checkpointUpdatedAt: createdAt,
       lastCheckpointUrl: null,
       loraCount: 0,
       loraVersionCount: 0,
-      loraUpdatedAt: Date.now(),
+      loraUpdatedAt: createdAt,
       lastLoraUrl: null,
     }, null, 2), "utf8");
   }
