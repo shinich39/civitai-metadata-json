@@ -117,7 +117,7 @@ async function getCheckpoints(type, nextPage) {
         limit: MAX_CHECKPOINT_COUNT,
         types: "Checkpoint",
         sort: "Newest",
-        period: "AllTime",
+        period: "Month",
       }, nextPage);
     case "week":
       return await getModels({
@@ -151,7 +151,7 @@ async function getLoras(type, nextPage) {
         limit: MAX_LORA_COUNT,
         types: "LORA",
         sort: "Newest",
-        period: "AllTime",
+        period: "Month",
       }, nextPage);
     case "week":
       return await getModels({
