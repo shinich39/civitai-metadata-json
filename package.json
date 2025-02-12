@@ -6,6 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "node scripts/test.js",
+    "update:ckpt": "npm run ckpt:new && npm run commit",
+    "update:lora": "npm run lora:new && npm run commit",
+    "update:all": "npm run ckpt:new && npm run lora:new && npm run commit",
     "ckpt:all": "node scripts/checkpoint-all.js --max-old-space-size=4096",
     "ckpt:new": "node scripts/checkpoint-new.js --max-old-space-size=4096",
     "ckpt:month": "node scripts/checkpoint-month.js --max-old-space-size=4096",

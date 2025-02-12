@@ -530,7 +530,7 @@ export async function collectCheckpoints(type = "all", skip = false) {
       }
   
       lastCheckpointUrl = checkpointRes.metadata.nextPage;
-      save();
+      // save();
       checkpointRes = await getCheckpoints(type, lastCheckpointUrl);
       pageNum++;
     } catch(err) {
