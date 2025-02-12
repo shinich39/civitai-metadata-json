@@ -4,7 +4,7 @@ import path from "node:path";
 
 let commands = [
   "git add .", 
-  `git commit -m "update"`, 
+  `git commit -m "update:auto"`, 
   "git push origin main",
 ];
 
