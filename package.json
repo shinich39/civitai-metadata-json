@@ -1,0 +1,33 @@
+{
+  "name": "civitai-metadata-json",
+  "version": "1.0.0",
+  "description": "Collect metadata from civitai",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/test.js",
+    "update:ckpt": "npm run ckpt:new && npm run ckpt:month && npm run commit",
+    "update:lora": "npm run lora:new && npm run lora:month && npm run commit",
+    "update:all": "npm run ckpt:new && npm run ckpt:month && npm run lora:new && npm run lora:month && npm run commit",
+    "update:new": "npm run ckpt:new && npm run lora:new && npm run commit",
+    "update:month": "npm run ckpt:month && npm run lora:month && npm run commit",
+    "ckpt:all": "node scripts/checkpoint-all.js --max-old-space-size=4096",
+    "ckpt:new": "node scripts/checkpoint-new.js --max-old-space-size=4096",
+    "ckpt:month": "node scripts/checkpoint-month.js --max-old-space-size=4096",
+    "ckpt:week": "node scripts/checkpoint-week.js --max-old-space-size=4096",
+    "lora:all": "node scripts/lora-all.js --max-old-space-size=4096",
+    "lora:new": "node scripts/lora-new.js --max-old-space-size=4096",
+    "lora:month": "node scripts/lora-month.js --max-old-space-size=4096",
+    "lora:week": "node scripts/lora-week.js --max-old-space-size=4096",
+    "commit": "node scripts/commit.js"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "shinich39 <shinich39@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "lodash": "^4.17.21"
+  }
+}
